@@ -1,0 +1,457 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Laxmi Narayan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one calm column. The hero puts the revenue figure first, then the career reads as a pipeline (intern > support > BD) with each stage's deal value drawn to scale. */
+:root {
+  --bg: #EEF1F5;
+  --surface: #FFFFFF;
+  --ink: #0F1B3D;
+  --muted: #475273;
+  --line: #CCD4E1;
+  --accent: #CF3B10;
+  --accent-ink: #FFFFFF;
+  --tint: #F9E1D8;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0A1128;
+    --surface: #121C3A;
+    --ink: #E9EDF7;
+    --muted: #9FAAC8;
+    --line: #26335A;
+    --accent: #FF7A4D;
+    --accent-ink: #0A1128;
+    --tint: #2A2440;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0A1128;
+  --surface: #121C3A;
+  --ink: #E9EDF7;
+  --muted: #9FAAC8;
+  --line: #26335A;
+  --accent: #FF7A4D;
+  --accent-ink: #0A1128;
+  --tint: #2A2440;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.wrap {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 56px;
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.1; letter-spacing: -0.015em; }
+p { margin: 0; }
+.mono { font-family: var(--font-mono); }
+.label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Top bar */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.id { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.mark {
+  width: 40px; height: 40px; flex: none;
+  display: grid; place-items: center;
+  background: var(--ink); color: var(--bg);
+  font-family: var(--font-display); font-weight: 800; font-size: 17px; letter-spacing: 0.02em;
+  border-radius: 6px;
+}
+.id strong { font-family: var(--font-display); font-size: 19px; font-weight: 700; }
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
+.status i { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); display: block; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px; padding-block: 56px 48px; align-items: end; }
+.hero h1 { font-size: clamp(36px, 5.6vw, 64px); font-weight: 700; margin-block: 16px 20px; }
+.lead { font-size: 19px; color: var(--muted); max-width: 54ch; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn {
+  display: inline-flex; align-items: center; min-height: 46px; padding: 0 22px;
+  font: 600 16px var(--font-body); text-decoration: none; border-radius: 6px;
+  border: 2px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer;
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn:hover { filter: brightness(1.08); }
+
+.figure { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 28px; }
+.figure .big {
+  font-family: var(--font-display); font-weight: 800; color: var(--accent);
+  font-size: clamp(64px, 12vw, 120px); line-height: 0.95; letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums; margin-block: 14px 12px;
+}
+.figure .grouped { font-family: var(--font-mono); font-size: 15px; overflow-wrap: anywhere; }
+.figure .note { color: var(--muted); font-size: 15px; margin-top: 8px; }
+
+/* Supporting numbers */
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding-block: 8px 56px; }
+.fact { border-top: 2px solid var(--ink); padding-top: 14px; }
+.fact b { display: block; font-family: var(--font-display); font-size: 40px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.fact span { display: block; margin-top: 8px; color: var(--muted); font-size: 15px; }
+
+/* Sections */
+section { padding-block: 48px; border-top: 1px solid var(--line); }
+.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px 40px; margin-bottom: 36px; }
+.head h2 { font-size: clamp(28px, 3.6vw, 40px); font-weight: 700; margin-top: 10px; }
+.head p { color: var(--muted); max-width: 60ch; align-self: end; }
+
+/* Career pipeline */
+.stages { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.stage { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.stage .rail { height: 6px; background: var(--line); border-radius: 3px; position: relative; }
+.stage.now .rail { background: var(--accent); }
+.stage .when { font-family: var(--font-mono); font-size: 13px; color: var(--muted); }
+.stage h3 { font-size: 24px; font-weight: 700; }
+.stage .org { color: var(--muted); font-size: 15px; margin-top: -8px; }
+.stage ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+.stage li::marker { color: var(--accent); }
+.value { margin-top: auto; padding-top: 18px; }
+.value .row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.value b { font-family: var(--font-display); font-size: 28px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.value small { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.track { height: 12px; background: var(--line); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+.track i { display: block; height: 100%; background: var(--accent); border-radius: 2px; }
+.scale-note { margin-top: 24px; font-size: 14px; color: var(--muted); }
+
+/* Services */
+.services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.service { padding-block: 26px; border-top: 1px solid var(--line); display: grid; gap: 10px; align-content: start; min-width: 0; }
+.service:nth-child(-n+2) { border-top: 2px solid var(--ink); }
+.service h3 { font-size: 24px; font-weight: 700; }
+.service p { color: var(--muted); }
+.service .with { font-family: var(--font-mono); font-size: 13px; color: var(--ink); }
+
+/* Toolkit */
+.tools { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.tools li { font-family: var(--font-mono); font-size: 14px; padding: 8px 14px; border: 1px solid var(--ink); border-radius: 999px; background: var(--surface); }
+.tools li.adv { background: var(--ink); color: var(--bg); }
+
+/* Process */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin: 0; padding: 0; list-style: none; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.steps li::before { content: counter(s); font-family: var(--font-display); font-weight: 800; font-size: 44px; line-height: 1; color: var(--accent); }
+.steps h3 { font-size: 20px; font-weight: 700; }
+.steps p { color: var(--muted); font-size: 16px; }
+
+/* Background */
+.bg-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.bg-grid h3 { font-size: 20px; font-weight: 700; margin-bottom: 14px; }
+.bg-grid ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+.bg-grid li { display: grid; gap: 2px; padding-left: 14px; border-left: 3px solid var(--tint); }
+.bg-grid li b { font-weight: 600; }
+.bg-grid li span { color: var(--muted); font-size: 15px; }
+
+/* Contact */
+.contact { background: var(--ink); color: var(--bg); border-radius: 10px; padding: clamp(24px, 5vw, 48px); border-top: 0; }
+.contact .label { color: var(--bg); opacity: 0.75; }
+.contact h2 { font-size: clamp(30px, 4.4vw, 48px); font-weight: 700; margin-block: 12px 28px; max-width: 18ch; }
+.lines { display: grid; gap: 14px; }
+.line { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding-bottom: 14px; border-bottom: 1px solid rgba(238, 241, 245, 0.25); }
+.line .k { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; width: 84px; flex: none; opacity: 0.75; }
+.line .v { font-family: var(--font-display); font-size: clamp(18px, 3.2vw, 26px); font-weight: 600; overflow-wrap: anywhere; min-width: 0; }
+.line a.v { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.copy { font: 500 13px var(--font-mono); color: var(--bg); background: transparent; border: 1px solid rgba(238, 241, 245, 0.6); border-radius: 4px; padding: 6px 12px; cursor: pointer; margin-left: auto; }
+.copy:hover { background: rgba(238, 241, 245, 0.15); }
+.contact .sub { margin-top: 22px; font-size: 15px; opacity: 0.8; }
+.contact :focus-visible { outline-color: var(--bg); }
+footer { padding-top: 28px; font-size: 14px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-block: 40px 32px; }
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .head { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-bottom: 28px; }
+  .stages { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .services { grid-template-columns: minmax(0, 1fr); }
+  .service:nth-child(2) { border-top: 1px solid var(--line); }
+  .bg-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .figure { padding: 22px; }
+  .line .k { width: 100%; }
+  .copy { margin-left: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .copy { transition: filter 0.15s ease, background 0.15s ease; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="id">
+      <div class="mark" aria-hidden="true">LN</div>
+      <strong>Laxmi Narayan</strong>
+    </div>
+    <div class="status"><i aria-hidden="true"></i> Taking on freelance projects · New Delhi, IST</div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <p class="label">Business development · Sales · Virtual assistance</p>
+        <h1>Sales results you can check, admin work you can hand off.</h1>
+        <p class="lead">I'm Laxmi Narayan, a business development and sales professional based in New Delhi. I take freelance projects in virtual assistance, lead generation and client support, and I bring the same tracking habits I use to run revenue accounts.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Start a project</a>
+          <a class="btn" href="https://www.fiverr.com/laxmi_narayan34" target="_blank" rel="noopener">See my Fiverr profile</a>
+        </div>
+      </div>
+      <aside class="figure" aria-label="Headline result">
+        <p class="label">Revenue generated at Uniliv</p>
+        <p class="big">₹8 Cr+</p>
+        <p class="grouped">₹8,00,00,000+ within 1.5 years</p>
+        <p class="note">Across 12+ cities, with client retention scaled to 80%.</p>
+      </aside>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><b>12+</b><span>cities where I expanded the partner network</span></div>
+      <div class="fact"><b>30+</b><span>potential markets identified</span></div>
+      <div class="fact"><b>80%</b><span>client retention reached</span></div>
+      <div class="fact"><b>1,200+</b><span>residents whose service queries I handled</span></div>
+    </div>
+
+    <section id="work" aria-labelledby="h-work">
+      <div class="head">
+        <div>
+          <p class="label">Track record</p>
+          <h2 id="h-work">Three roles, one company, bigger scope each time</h2>
+        </div>
+        <p>Every step below was a promotion from the one before it. The bars show the revenue each role produced, drawn to the same scale.</p>
+      </div>
+
+      <div class="stages">
+        <article class="stage">
+          <div class="rail" aria-hidden="true"></div>
+          <p class="when">Jun 2023 – Aug 2023</p>
+          <h3>Business Development Intern</h3>
+          <p class="org">Uniliv</p>
+          <ul>
+            <li>Acquired clients who generated 40+ lakh in 3 months.</li>
+            <li>Earned a pre-placement offer (PPO) for client engagement results.</li>
+          </ul>
+          <div class="value">
+            <div class="row"><b>₹40 L+</b><small>in 3 months</small></div>
+            <div class="track" role="img" aria-label="40 lakh rupees, about 5 percent of 8 crore"><i style="width:5%"></i></div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="rail" aria-hidden="true"></div>
+          <p class="when">Sep 2023 – May 2024</p>
+          <h3>Customer Service + Sales</h3>
+          <p class="org">Uniliv</p>
+          <ul>
+            <li>Managed support for 1,200+ residents with timely resolution of service queries.</li>
+            <li>Sold 1.2+ crore over 9 months and was promoted for client satisfaction and sales growth.</li>
+          </ul>
+          <div class="value">
+            <div class="row"><b>₹1.2 Cr+</b><small>in 9 months</small></div>
+            <div class="track" role="img" aria-label="1.2 crore rupees, about 15 percent of 8 crore"><i style="width:15%"></i></div>
+          </div>
+        </article>
+
+        <article class="stage now">
+          <div class="rail" aria-hidden="true"></div>
+          <p class="when">Jun 2024 – Present</p>
+          <h3>Business Development Associate + Sales</h3>
+          <p class="org">Uniliv</p>
+          <ul>
+            <li>Expanded the company's presence across 12+ cities and strengthened partner networks.</li>
+            <li>Identified 30+ potential markets and scaled retention to 80%.</li>
+            <li>Tracked conversions and customer engagement in CRM and analytics tools.</li>
+          </ul>
+          <div class="value">
+            <div class="row"><b>₹8 Cr+</b><small>in 1.5 years</small></div>
+            <div class="track" role="img" aria-label="8 crore rupees, the full scale"><i style="width:100%"></i></div>
+          </div>
+        </article>
+      </div>
+      <p class="scale-note">Each figure covers its own time window, shown beside it.</p>
+    </section>
+
+    <section id="services" aria-labelledby="h-services">
+      <div class="head">
+        <div>
+          <p class="label">What you can hire me for</p>
+          <h2 id="h-services">Four kinds of work, each tied to something I've already done</h2>
+        </div>
+        <p>Pick one, or combine them as a standing monthly arrangement.</p>
+      </div>
+      <div class="services">
+        <div class="service">
+          <h3>Virtual assistance and admin</h3>
+          <p>Data entry, inbox management, calendar scheduling and follow-ups, kept accurate and on schedule so your day stays clear.</p>
+          <p class="with">MS Office (advanced)</p>
+        </div>
+        <div class="service">
+          <h3>Lead generation and market research</h3>
+          <p>Market scans, prospect lists and outreach tracking. I found 30+ potential markets for Uniliv and logged the pipeline in a CRM.</p>
+          <p class="with">HubSpot CRM · Google Analytics</p>
+        </div>
+        <div class="service">
+          <h3>Client support and retention</h3>
+          <p>First-line replies, query tracking and follow-ups that keep customers. I supported 1,200+ residents and helped lift retention to 80%.</p>
+          <p class="with">CRM · Email · Phone</p>
+        </div>
+        <div class="service">
+          <h3>Website updates</h3>
+          <p>Page edits, content changes and routine upkeep on WordPress sites, with simple traffic reporting so you can see what is working.</p>
+          <p class="with">WordPress · Elementor · Google Analytics</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="toolkit" aria-labelledby="h-tools">
+      <div class="head">
+        <div>
+          <p class="label">Toolkit</p>
+          <h2 id="h-tools">What I work in</h2>
+        </div>
+        <p>Dark chips are the tools I use every day. The rest I use when a project needs them.</p>
+      </div>
+      <ul class="tools">
+        <li class="adv">MS Office (advanced)</li>
+        <li class="adv">HubSpot CRM</li>
+        <li class="adv">Google Analytics</li>
+        <li class="adv">WordPress</li>
+        <li class="adv">Elementor</li>
+        <li>Python</li>
+        <li>MySQL</li>
+        <li>C++</li>
+      </ul>
+    </section>
+
+    <section id="process" aria-labelledby="h-process">
+      <div class="head">
+        <div>
+          <p class="label">How a project runs</p>
+          <h2 id="h-process">Four steps from message to delivery</h2>
+        </div>
+        <p>You always know what I'm doing and when it will be done.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Brief</h3><p>You send the task, the files and any access I need. I confirm scope and deadline in writing.</p></li>
+        <li><h3>Set up</h3><p>I agree the format, the tracking sheet and who to contact with questions.</p></li>
+        <li><h3>Deliver</h3><p>I complete the work to the agreed standard and check it before it reaches you.</p></li>
+        <li><h3>Report</h3><p>You get a short summary of what was done, so the next round starts faster.</p></li>
+      </ol>
+    </section>
+
+    <section id="background" aria-labelledby="h-bg">
+      <div class="head">
+        <div>
+          <p class="label">Background</p>
+          <h2 id="h-bg">Education and recognition</h2>
+        </div>
+        <p>Commerce training at Delhi University, plus event and community work that built my communication skills.</p>
+      </div>
+      <div class="bg-grid">
+        <div>
+          <h3>Education</h3>
+          <ul>
+            <li><b>Bachelor of Commerce (B.Com)</b><span>Dr. Bheem Rao Ambedkar College, Delhi University</span></li>
+            <li><b>Intermediate (12th)</b><span>St. Mary's Sona Talab, Varanasi · 1st prize, Commerce Carnival (district level)</span></li>
+            <li><b>High School (10th)</b><span>St. Mary's Sona Talab, Varanasi</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Recognition and activities</h3>
+          <ul>
+            <li><b>Pre-placement offer</b><span>Awarded for top intern performance</span></li>
+            <li><b>Targets exceeded</b><span>Sales and retention targets beaten in consecutive quarters</span></li>
+            <li><b>Delegate Affairs Secretary</b><span>Organizing Committee, National MUN event "SANSAD"</span></li>
+            <li><b>NSS Society member</b><span>Plus multiple certifications</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="h-contact">
+      <p class="label">Contact</p>
+      <h2 id="h-contact">Tell me what needs doing and by when.</h2>
+      <div class="lines">
+        <div class="line">
+          <span class="k">Email</span>
+          <a class="v" id="email-text" href="mailto:laxmi.narayan342002@gmail.com">laxmi.narayan342002@gmail.com</a>
+          <button class="copy" type="button" data-copy="laxmi.narayan342002@gmail.com" data-target="email-text">Copy</button>
+        </div>
+        <div class="line">
+          <span class="k">Phone</span>
+          <span class="v" id="phone-text">+91 73070 70106</span>
+          <button class="copy" type="button" data-copy="+917307070106" data-target="phone-text">Copy</button>
+        </div>
+        <div class="line">
+          <span class="k">Fiverr</span>
+          <a class="v" href="https://www.fiverr.com/laxmi_narayan34" target="_blank" rel="noopener">fiverr.com/laxmi_narayan34</a>
+        </div>
+      </div>
+      <p class="sub">Based in New Delhi (IST, UTC+5:30). Email is the quickest way to reach me.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Laxmi Narayan · New Delhi</span>
+    <span>Figures are from my work at Uniliv, 2023 to present.</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.copy');
+  function selectText(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var r = document.createRange();
+    r.selectNodeContents(el);
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
+  }
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var value = btn.getAttribute('data-copy');
+      var target = btn.getAttribute('data-target');
+      var done = function (ok) {
+        btn.textContent = ok ? 'Copied' : 'Selected, press Ctrl+C';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 2000);
+      };
+      try {
+        navigator.clipboard.writeText(value).then(function () { done(true); }, function () { selectText(target); done(false); });
+      } catch (e) {
+        selectText(target);
+        done(false);
+      }
+    });
+  });
+})();
+</script>
+
+</body></html>
